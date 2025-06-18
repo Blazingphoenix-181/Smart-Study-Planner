@@ -1,0 +1,170 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+  background-color: #170021;
+  text-align: center;
+  background-image: linear-gradient(135deg, #170021, #330044, #4a005f);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+
+}
+
+#loginSection,
+#plannerSection {
+  margin-top: 4rem;
+  background: rgb(255, 255, 255);
+  padding: 2rem;
+  border-radius: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.795);
+  background-image: 
+    linear-gradient(white, white), 
+    linear-gradient(135deg, #1b011d, #36044e, #580367); 
+  
+  
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  border: 1px solid transparent;
+
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"] {
+  width: 90%;
+  padding: 10px;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #2d002f;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  background-image: linear-gradient(to right, #6a0572, #ab1a87);
+  transition: button 0.3s ease;
+  
+}
+
+.social-login {
+  margin-top: 1rem;
+ 
+}
+
+.social-button {
+  width: 90%;
+  padding: 10px;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+
+}
+
+.google-btn {
+  background-color: #2a0137;
+  color: rgb(255, 255, 255);
+  background-image: linear-gradient(to right, #6a0572, #ab1a87);
+  transition: button 0.3s ease;
+
+
+}
+
+.google-btn:hover {
+  background-image: linear-gradient(to right, #ab1a87, #6a0572);
+}
+
+
+
+.microsoft-btn {
+  background-color: #2a0137;
+  color: white;
+  background-image: linear-gradient(to right, #6a0572, #ab1a87);
+  transition: button 0.3s ease;
+
+}
+
+.microsoft-btn:hover {
+  background-image: linear-gradient(to right, #ab1a87, #6a0572);
+}
+
+.signup-link {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: rgb(62, 10, 74);
+}
+
+h1 {
+  color: #ffffff;
+  background-image: linear-gradient(135deg, #170021, #330044, #4a005f);
+  height: 60px;
+   
+}
+p {
+  color: #ffffff;
+}
+
+@keyframes gradientAnimation {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+h2{
+  color: white;
+}
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1000; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 30px;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.modal-content input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.modal-content button {
+  padding: 10px 20px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}

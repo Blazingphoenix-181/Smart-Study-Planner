@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Study Planner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Smart Study Planner</h1>
+  <p>Welcome to the Smart Study Planner! Please log in or sign up to start planning your study tasks.</p>
+
+
+   <div id="loginSection">
+    <input type="text" id="email" placeholder="Enter Email Id" />
+    <input type="password" id="password" placeholder="Enter Password" />
+    <button onclick="login()">Login</button>
+    <p>or</p>
+    <div class="social-login">
+      <button class="social-button google-btn" onclick="loginWithGoogle()">Sign in with Google</button>
+      <button class="social-button microsoft-btn" onclick="loginWithMicrosoft()">Sign in with Microsoft</button>
+    </div>
+    <p class="signup-link">
+      Don't have an account? <a href="#" onclick="openSignupModal()">Sign up here</a>
+    </p>
+  </div>
+
+
+  <div id="signupModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeSignupModal()">&times;</span>
+      <h2>Sign Up</h2>
+      <input type="text" id="signupName" placeholder="Full Name" required>
+      <input type="email" id="signupEmail" placeholder="Email" required>
+      <input type="password" id="signupPassword" placeholder="Password" required>
+      <button onclick="handleSignup()">Sign Up</button>
+    </div>
+  </div>
+
+
+  <div id="welcomeSection" style="display: none;">
+    <h2>Welcome, <span id="userName"></span>!</h2>
+    <button onclick="showPlanner()">Go to Planner</button>
+  </div>
+
+  <div id="plannerSection" style="display: none;">
+    <form id="taskForm">
+      <input type="text" id="subject" placeholder="Subject" required />
+      <input type="date" id="starting" required />
+      <input type="date" id="deadline" required />
+      <input type="text" id="task" placeholder="Task Description" required />
+      <input type="time" id="startTime" placeholder="Start Time" required />
+      <input type="time" id="endTime" placeholder="End Time" required />
+      <button type="submit">Add Task</button>
+    </form>
+    <ul id="taskList"></ul>
+    <button onclick="downloadExcel()">Download Tasks as Excel</button>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+
+  <script src="script.js"></script>
+  <!-- Firebase SDKs -->
+<script type="module" src="firebase-auth.js"></script>
+<script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+
+
+  
+
+ 
+
+</body>
+</html>
